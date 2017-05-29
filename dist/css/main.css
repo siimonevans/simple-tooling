@@ -1402,6 +1402,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: #76bfbf;
 }
 
 img,
@@ -1526,12 +1527,25 @@ small, .milli {
   list-style: decimal;
 }
 
+.article a {
+  color: #407f80;
+  transition: color 300ms ease;
+}
+
+.article a:hover {
+  color: #265454;
+}
+
+.article h1 {
+  margin-bottom: 10px;
+}
+
 /*------------------------------------*    $MOLECULES
 \*------------------------------------*/
 /*------------------------------------*    $SITE WELCOME
 \*------------------------------------*/
 .site-welcome {
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px;
   background-color: #82d0d0;
   border: 30px solid #76bfbf;
