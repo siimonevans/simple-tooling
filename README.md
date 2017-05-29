@@ -1,19 +1,17 @@
 
-# Design In The Browser Bootstrap, Patternlab edition!
+# Simple tooling
 
-This project provides a starting point for prototypes, with tooling and an opinion on CSS and JS structure to allow for rapid development utilising Patternlab ensuring all work is as transferable and as maintainable as possible.
+This is a lighter version of the [DIBB](https://github.com/torchbox/design-in-browser-bootstrap), using the same tooling but without Pattern Lab.
 
 ## What's required
 
-It is assumed the developers computer is running OSX or Linux. Depending on your setup you may already have the below installed;
+It is assumed the developer's computer is running OSX or Linux. Depending on your setup you may already have the below installed;
 
 * [Node.js](http://nodejs.org) (version 4.x.x)
-* [PHP](http://www.php.net/) (version 5.5+)
 * Optional: [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## What's included
 
-* [Patternlab-PHP](https://github.com/pattern-lab/edition-php-twig-standard): Currently the most complete and stable version of patternlab, and supports [twig](http://twig.sensiolabs.org/).
 * [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
 * [Browsersync](https://www.browsersync.io) for autoreloading.
 * [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
@@ -22,12 +20,6 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
   * uglifyjs with sourcemaps (disabled by default)
   * support for using any installed node modules on the webiste
   * display file size information
-* Examples in `/site/javascript/main.js` showing...
-  * how to import ES6 modules (`point.js`)
-  * how to import CommonJS modules (`vendor/jquery.js` via `globals.js`)
-  * how to expose variables like `jQuery` globally (`globals.js`)
-  * how to import plain old javascript files that might depend on global variables (`vendor/jquery-test-plugin.js`)
-  * how to use external global variables without importing them (`main.js` + `.eslintrc`)
 * Consideration for images, currently copying the directory only - to avoid slowdowns and non-essential dependancies. We encourage using SVG for UI vectors and pre-optimised UI photograph assets.
 * An automated way to upload your site to a staging server using [dploy](https://github.com/LeanMeanFightingMachine/dploy).
 * [Build commands](#build-scripts) for generating testable or deployable assets only
@@ -36,11 +28,11 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
 
 To start a prototype using this bootstrap;
 
-- [ ] **Get the files:** Clone this repository to a new directory, for example;
-`git clone https://github.com/torchbox/design-in-browser-bootstrap.git new-project`.
-- [ ] **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
-- [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
-- [ ] **Install dependencies** Run `yarn install` to run the install process. `npm install` will work too, see [section about yarn below](#using-yarn).
+* **Get the files:** Clone this repository to a new directory, for example;
+`git clone https://github.com/SimonDEvans/simple-tooling.git new-project`.
+* **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
+* **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
+* **Install dependencies** Run `yarn install` to run the install process. `npm install` will work too, see [section about yarn below](#using-yarn).
 
 
 ## Developing with it
@@ -82,32 +74,9 @@ To test production, minified and vendor prefixed assets you can use
 
  * `npm run debug` To develop with a simple http server, no browsersync and production assets
 
-
-## Troubleshooting
-
-### Installation
-If you see the following error you can resolve node permissions using these steps: https://github.com/npm/npm/wiki/Troubleshooting#permission-error
-
-```
-npm WARN package.json globalwitness@0.0.1 No repository field.
-npm ERR! Error: EACCES, mkdir '/Users/Dave/.npm/depd/1.0.0'
-npm ERR!  { [Error: EACCES, mkdir '/Users/Dave/.npm/depd/1.0.0']
-npm ERR!   errno: 3,
-npm ERR!   code: 'EACCES',
-npm ERR!   path: '/Users/Dave/.npm/depd/1.0.0',
-npm ERR!   parent: 'connect' }
-npm ERR!
-npm ERR! Please try running this command again as root/Administrator.
-
-```
-
-## Technical Debt
-
- - 30 minute timeout from patternlab is hardcoded and within the vendor directory, a value has been modified in vendor/pattern-lab/core/src/PatternLab/Console/Commands/WatchCommand.php
-
 ## License
 
-Copyright (c) 2016 Torchbox Ltd
+Copyright (c) 2017 Torchbox Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
