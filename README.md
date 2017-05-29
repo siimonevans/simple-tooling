@@ -28,7 +28,7 @@ It is assumed the developer's computer is running OSX or Linux. Depending on you
 
 To start a prototype using this bootstrap;
 
-* **Get the files:** Clone this repository to a new directory, for example;
+* **Get the files:** Clone this repository to a new directory, for example 
 `git clone https://github.com/SimonDEvans/simple-tooling.git new-project`.
 * **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
 * **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
@@ -38,7 +38,7 @@ To start a prototype using this bootstrap;
 ## Developing with it
 
 * To start the development environment `npm start` - to stop this process press `ctrl + c`.
-* This will start Browsersync and open your default browser after the startup process is complete. You can change this configuation by modifying the `browsersync.config.js` file, documented here https://www.browsersync.io/docs/options.
+* This will start Browsersync and make the project available at `http://localhost:3000/html/`. If another process is using this port, check terminal for an updated URL. You can change this configuation by modifying the `browsersync.config.js` file, documented here https://www.browsersync.io/docs/options.
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
 ### Using yarn
