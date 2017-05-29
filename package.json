@@ -30,10 +30,11 @@
     "http": "http-server './dist' -p 4000",
     "reload": "browser-sync reload",
     "reload:css": "npm run reload -- --files='*.css'",
-    "clean:lab": "rm -rf $npm_package_config_dest_html/{*.html,js/**,css/**,img/**}",
-    "clean:dist": "rm -rf $npm_package_config_dist/{js/**,css/**,images/**,patternlab/{annotations,css,fonts,js,patternlab-components,patterns}}",
+    "clean:site": "rm -rf $npm_package_config_dest_html/{*.html,js/**,css/**,img/**}",
+    "clean:dist": "rm -rf $npm_package_config_dist/{js/**,css/**,images/**,html/**}",
     "clean": "npm-run-all -p clean:*",
     "git:init": "rm -rf .git && git init && git add . && git commit -m 'Project start'",
+
     "//[ SASS ]//": "",
     "compile:css": "node-sass -o $npm_package_config_dest_css $npm_package_config_src_css",
     "compile:css:dev": "npm run compile:css -- --output-style expanded --source-map true",
@@ -41,16 +42,19 @@
     "compile:css:prod": "npm run compile:css -- --output-style compressed && npm run autoprefixer",
     "compile:css:debug": "npm run compile:css -- --output-style compressed --watch",
     "autoprefixer": "postcss -u autoprefixer -b 'last 2 versions, iOS 8, > 3%' -r $npm_package_config_dest_css/*.css",
+
     "//[ Javascript ]//": "",
     "compile:js": "rollup -c",
     "compile:js:dev": "npm run compile:js -- --environment entry:main.js",
     "compile:js:watch": "npm run compile:js -- --environment entry:main.js --watch",
     "compile:js:prod": "npm run compile:js -- --environment entry:main.js,production",
     "compile:js:debug": "npm run compile:js -- --environment entry:main.js,production --watch",
+
     "//[ Linting ]//": "",
     "lint:css": "sass-lint $npm_package_config_src_css'/**/**' -v -q || true",
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
     "lint": "npm-run-all -p lint:js lint:css",
+
     "//[ Watches ]//": "",
     "watch:html": "onchange $npm_package_config_src_html'/**/**' -- npm-run-all sync:html reload",
     "watch:html:debug": "onchange $npm_package_config_src_html'/**/**' -- npm-run-all sync:html",
@@ -60,7 +64,8 @@
     "watch:css": "onchange $npm_package_config_dest_css -- npm-run-all -p reload:css lint:css",
     "watch:css:debug": "onchange $npm_package_config_dest_css -- npm-run-all -p autoprefixer",
     "watch": "npm-run-all -p watch:*",
-    "//[ Patternlab Syncs ]//": "",
+
+    "//[ Syncs ]//": "",
     "sync:html": "rsync -rtvu --delete $npm_package_config_src_html/ $npm_package_config_dest_html/",
     "sync:img": "rsync -rtvu --delete $npm_package_config_src_img/ $npm_package_config_dest_img/",
     "sync": "npm-run-all -p sync:*",
@@ -69,7 +74,7 @@
     "build": "npm-run-all clean sync compile:*:dev",
     "build:prod": "npm-run-all clean sync compile:*:prod",
     "deploy": "npm-run-all clean build:prod upload",
-    "lab": "npm-run-all clean sync compile:*:dev -p compile:*:watch watch serve --silent",
+    "start": "npm-run-all clean sync compile:*:dev -p compile:*:watch watch serve --silent",
     "debug": "npm-run-all clean sync compile:*:prod -p compile:*:debug watch:*:debug http --silent",
     "postinstall": "npm run build"
   },
