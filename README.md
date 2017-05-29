@@ -37,7 +37,7 @@ To start a prototype using this bootstrap;
 
 ## Developing with it
 
-* To start the development environment `npm run lab` - to stop this process press `ctrl + c`.
+* To start the development environment `npm start` - to stop this process press `ctrl + c`.
 * This will start Browsersync and open your default browser after the startup process is complete. You can change this configuation by modifying the `browsersync.config.js` file, documented here https://www.browsersync.io/docs/options.
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
