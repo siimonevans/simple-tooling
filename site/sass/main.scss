@@ -1,20 +1,23 @@
 /*------------------------------------*\
-	$TABLE OF CONTENTS
+    $TABLE OF CONTENTS
 \*------------------------------------*/
 
 
 /**
  *
- * Vendor ---------------------------
- * .....Gridle
- * .....Normalize
- *
  * Config ---------------------------
  * .....Variables
+ *
+ * Vendor ---------------------------
+ * .....Normalize
  * .....Grid
  *
- * Lib ------------------------------
+ * Abstracts ------------------------
  * .....Mixins
+ * .....Functions
+ * .....Base
+ * .....Type
+ * .....Patternlab
  *
  * Atoms ----------------------------
  * Molecules ------------------------
@@ -26,57 +29,50 @@
 
 
 /*------------------------------------*\
-	$VENDOR
-\*------------------------------------*/
-@import 'vendor/normalize';
-
-
-/*------------------------------------*\
-	$CONFIG
+    $CONFIG
 \*------------------------------------*/
 @import 'config/variables';
 
 
 /*------------------------------------*\
-	$Abstracts
+    $VENDOR
+\*------------------------------------*/
+@import 'vendor/normalize';
+@import 'vendor/csswizardry-grids';
+
+
+/*------------------------------------*\
+    $ABSTRACTS
 \*------------------------------------*/
 @import 'abstracts/mixins';
+@import 'abstracts/functions';
 @import 'abstracts/base';
-@import 'abstracts/layout';
+@import 'abstracts/type';
 
 
 /*------------------------------------*\
-	$Atoms
+    $ATOMS
 \*------------------------------------*/
-@import 'atoms/text/heading';
-@import 'atoms/text/paragraph';
-@import 'atoms/text/introduction';
-@import 'atoms/text/subheading';
-@import 'atoms/text/section-heading';
-@import 'atoms/text/detail';
-@import 'atoms/image/full-width';
-@import 'atoms/image/inline';
-@import 'atoms/image/cover';
+@import 'atoms/article';
 
 
 /*------------------------------------*\
-	$Components
+    $MOLECULES
 \*------------------------------------*/
-@import 'components/header';
-@import 'components/header--animated';
-@import 'components/navigation';
-@import 'components/cards';
-// @import 'components/priority-nav';
+@import 'molecules/site-welcome';
 
 
 /*------------------------------------*\
-	$TEMPLATES
+    $ORGANISMS
 \*------------------------------------*/
-@import 'templates/home';
 
 
 /*------------------------------------*\
-	$PAGES
+    $TEMPLATES
 \*------------------------------------*/
-// @import '04-pages/';
+
+
+/*------------------------------------*\
+    $PAGES
+\*------------------------------------*/
 

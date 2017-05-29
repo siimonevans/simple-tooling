@@ -1,5 +1,3 @@
-// test importing CommonJS modules from ./vendor/
-
 import jQuery from './vendor/jquery';
 
 // We have to manually make jQuery a global variable.

@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $ARTICLE
+    Default rich text styles
+\*------------------------------------*/
+
+.article {
+    ul {
+        margin-left: 40px;
+        list-style: disc;
+    }
+
+    ol {
+        margin-left: 40px;
+        list-style: decimal;
+    }
+}
