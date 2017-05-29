@@ -4,7 +4,7 @@
   "author": "Torchbox Ltd",
   "repository": {
     "type": "git",
-    "url": "https://github.com/torchbox/design-in-browser-bootstrap/"
+    "url": "https://github.com/SimonDEvans/simple-tooling"
   },
   "browserslist": [
     "> 3%",
