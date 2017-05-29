@@ -11,6 +11,7 @@ function jsDemo() {
     }
 
     function bindEvents() {
+        
         // Check for JS
         $(window).on('load', () => {
             console.log($testVar);

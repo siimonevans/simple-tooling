@@ -2241,6 +2241,7 @@ function jsDemo() {
     }
 
     function bindEvents() {
+
         // Check for JS
         jquery(window).on('load', function () {
             console.log($testVar);
