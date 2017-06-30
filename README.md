@@ -37,7 +37,7 @@ To start a prototype using this bootstrap;
 
 ## Developing with it
 
-* To start the development environment `npm start` - to stop this process press `ctrl + c`.
+* To start the development environment, run `yarn start`, or alternatively `npm start` - to stop this process press `ctrl + c`.
 * This will start Browsersync and make the project available at `http://localhost:3000/html/`. If another process is using this port, check terminal for an updated URL. You can change this configuation by modifying the `browsersync.config.js` file, documented here https://www.browsersync.io/docs/options.
 * Source files for developing your project are in `src` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
