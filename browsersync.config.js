@@ -5,7 +5,7 @@
 module.exports = {
     server: 'dist',
     startPath: '/html/',
-    open: false,
+    open: true,
     snippetOptions: {
         async: true,
         whitelist: [],

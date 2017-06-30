@@ -12,11 +12,11 @@ options:
 # File Options
 files:
   ignore:
-    - 'site/sass/vendor/**/*.*'
-    - 'site/sass/config/_grid.scss'
-    - 'site/sass/scaffolding.scss'
+    - 'src/sass/vendor/**/*.*'
+    - 'src/sass/config/_grid.scss'
+    - 'src/sass/scaffolding.scss'
 #   include:
-#    - 'site/src/_source/sass/**/*.s+(a|c)ss'
+#    - 'src/src/_source/sass/**/*.s+(a|c)ss'
 # Rule Configuration
 rules:
   bem-depth:
